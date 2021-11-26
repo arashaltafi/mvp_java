@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.ss.bottomnavigation.BottomNavigation
+        app:mode="phone"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+
+        <com.ss.bottomnavigation.TabItem
+            android:id="@+id/tab_videos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_text="ویدیو"
+            app:tab_icon="@drawable/ic_baseline_video_library_24" />
+
+        <com.ss.bottomnavigation.TabItem
+            android:id="@+id/tab_bookmark"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_text="علاقه مندی"
+            app:tab_icon="@drawable/ic_baseline_bookmark_24" />
+
+        <com.ss.bottomnavigation.TabItem
+            android:id="@+id/tab_category"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_text="دسته بندی"
+            app:tab_icon="@drawable/ic_baseline_list_24" />
+
+        <com.ss.bottomnavigation.TabItem
+            android:id="@+id/tab_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_text="خانه"
+            app:tab_icon="@drawable/ic_baseline_home_24" />
+
+    </com.ss.bottomnavigation.BottomNavigation>
+
+    <FrameLayout
+        android:layout_above="@+id/bottom_navigation"
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:layout_above="@+id/bottom_navigation"
+        android:id="@+id/frameLayout_ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search.Search_Activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <EditText
+                android:textDirection="rtl"
+                android:background="@drawable/shape_search"
+                android:layout_marginVertical="12dp"
+                android:layout_marginHorizontal="16dp"
+                android:paddingHorizontal="32dp"
+                android:id="@+id/edt_search"
+                android:hint="جستجو ..."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/img_back"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"
+                app:srcCompat = "@drawable/ic_baseline_arrow_back_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="#9E9D9D" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:id="@+id/img_clear"
+                android:layout_marginRight="24dp"
+                android:layout_centerVertical="true"
+                app:srcCompat = "@drawable/ic_baseline_clear_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="#9E9D9D" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:id="@+id/recy_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:text="موردی یافت نشد"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/txt_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
